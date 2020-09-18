@@ -2069,9 +2069,9 @@ void CallGraphView::refresh()
     QString renderProgram;
     QStringList renderArgs;
     if (_layout == GraphOptions::Circular)
-        renderProgram = QStringLiteral("twopi");
+        renderProgram = QStringLiteral("@@PREFIX@@/bin/twopi");
     else
-        renderProgram = QStringLiteral("dot");
+        renderProgram = QStringLiteral("@@PREFIX@@/bin/dot");
     renderArgs << QStringLiteral("-Tplain");
 
     _unparsedOutput = QString();
